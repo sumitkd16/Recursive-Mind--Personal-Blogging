@@ -166,7 +166,11 @@ export default function BlogDetail() {
                             disabled={isLiking}
                             className="flex items-center gap-2 bg-surface-elevated px-4 py-2 rounded-lg hover:bg-primary-500/20 transition disabled:opacity-50"
                         >
-                            <Heart size={20} className={isLiking ? "animate-pulse" : ""} />
+                            <Heart
+                                size={20}
+                                className={`text-red-500 ${isLiking ? "animate-pulse" : ""}`}
+                                fill="red"
+                            />
                             {likes} {likes === 1 ? 'Like' : 'Likes'}
                         </button>
                         <button
