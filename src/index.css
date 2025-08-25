@@ -1,0 +1,93 @@
+/* ---------- Google Font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- Tailwind v4 ---------- */
+@import "tailwindcss";
+
+/* ---------- THEME TOKENS ---------- */
+:root {
+    --clr-bg: #000000;
+    --clr-surface: rgba(255, 255, 255, 0.08);
+    --clr-surface-elevated: rgba(255, 255, 255, 0.12);
+
+    --clr-primary-400: #06ffa5;
+    --clr-primary-500: #00e09f;
+    --clr-primary-600: #00c896;
+
+    --clr-accent-400: #00d9ff;
+    --clr-accent-500: #0099cc;
+    --clr-accent-600: #0077b6;
+
+    --clr-neutral-100: #ffffff;
+    --clr-neutral-200: #e5e5e5;
+    --clr-neutral-300: #d4d4d4;
+    --clr-neutral-800: #151a1a;
+    --clr-neutral-900: #000000;
+
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, var(--clr-primary-500) 0%, var(--clr-accent-500) 100%);
+    --gradient-button: linear-gradient(135deg, var(--clr-primary-500) 0%, var(--clr-accent-400) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, rgba(0, 224, 159, 0.2) 0%, rgba(0, 0, 0, 1) 70%);
+
+    --font-body: 'Inter', system-ui, sans-serif;
+}
+
+/* ---------- Expose to Tailwind ---------- */
+@theme {
+    --color-bg: var(--clr-bg);
+    --color-surface: var(--clr-surface);
+    --color-surface-elevated: var(--clr-surface-elevated);
+
+    --color-primary-400: var(--clr-primary-400);
+    --color-primary-500: var(--clr-primary-500);
+    --color-primary-600: var(--clr-primary-600);
+
+    --color-accent-400: var(--clr-accent-400);
+    --color-accent-500: var(--clr-accent-500);
+    --color-accent-600: var(--clr-accent-600);
+
+    --color-neutral-100: var(--clr-neutral-100);
+    --color-neutral-200: var(--clr-neutral-200);
+    --color-neutral-300: var(--clr-neutral-300);
+    --color-neutral-800: var(--clr-neutral-800);
+    --color-neutral-900: var(--clr-neutral-900);
+
+    --font-sans: var(--font-body);
+    --shadow-glow: 0 0 20px -5px var(--clr-primary-500);
+}
+
+/* ---------- Global base ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-neutral-100);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Custom utility classes */
+.bg-gradient-brand {
+    background: var(--gradient-brand);
+}
+
+.bg-gradient-button {
+    background: var(--gradient-button);
+}
+
+.bg-gradient-hero {
+    background: var(--gradient-hero);
+}
+
+.text-gradient-brand {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.shadow-glow {
+    box-shadow: var(--shadow-glow);
+}
