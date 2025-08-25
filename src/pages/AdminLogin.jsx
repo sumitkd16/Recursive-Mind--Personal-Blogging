@@ -12,11 +12,10 @@ export default function AdminLogin() {
         e.preventDefault();
         setIsLoading(true);
 
-        // Replace with a strong password
+
 
         const ADMIN_PASSWORD = import.meta.env.VITE_FIREBASE_ADMIN_PASSWORD;
 
-        // Simulate a small delay for better UX
         await new Promise(resolve => setTimeout(resolve, 800));
 
         if (password === ADMIN_PASSWORD) {
